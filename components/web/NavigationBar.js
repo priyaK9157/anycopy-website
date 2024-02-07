@@ -80,7 +80,7 @@ const Modal = () => {
             <a
               className="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
               onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+              onMouseLeave={() => setIsHovered(true)}
               onClick={() => setclicked("solutions")}
             >
               Solutions
@@ -119,11 +119,13 @@ const Modal = () => {
           {(clicked === "solution" || isHovered === true) && (
             <div className="bg-transparent pt-16 w-[65rem] font-sans-serif font-size-[18px] text-[#303030] line-height-[1.5] line-spacing-0 z-50 absolute bg-white w-screen gap-20 flex justify-around shadow-xl text-lg p-5 h-screen overflow-hidden">
               <div className="flex flex-col gap-5 ">
-                <h1 className="font-bold text-2xl">By industry</h1>
-                <div className="flex flex-col gap-5 text-[1rem] text-slate-800 ">
-                  <div className="flex items-center gap-2">
+                <h1 class="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-xl lg:text-xl leading-loose ">
+                  By industry
+                </h1>
+                <div className="flex flex-col gap-5 text-[1rem] leading-6 text-slate-600 ">
+                  <div className="flex items-center gap-2 font-sans">
                     <AiOutlineSound />
-                    <p>Agencies</p>
+                    <p className="">Agencies</p>
                   </div>
                   <div className="flex items-center gap-2">
                     <IoCartOutline />
@@ -148,9 +150,11 @@ const Modal = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-5">
-                <h1 className="font-bold text-2xl ">By Use Cases</h1>
-                <div className="flex flex-col gap-5 text-[1rem] text-slate-800 ">
-                  <div className="flex items-center gap-2">
+                <h1 class="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-xl lg:text-xl leading-loose ">
+                  By Use Cases
+                </h1>
+                <div className="flex flex-col gap-5 text-[1rem] leading-6 text-slate-600 ">
+                  <div className="flex items-center gap-2 leading-6 text-slate-600">
                     <FaArrowPointer />
                     <p>PPC</p>
                   </div>
@@ -173,14 +177,19 @@ const Modal = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-5">
-                <h1 className="font-bold text-xl ">
+                <h1 class="custom-heading mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-xl lg:text-xl leading-loose">
                   Flexible limits and extra support
                 </h1>
-                <div className="flex flex-col gap-5 text-[1rem] text-slate-800 max-w-[20rem]">
+                <div className="flex flex-col gap-5 text-[1rem] leading-6 text-slate-600 max-w-[20rem]">
                   Our Concierge plans scale to any amount of traffic and
                   conversions—and with hands-on training and support, you have
                   everything you need to keep your business growing.
                 </div>
+                <img
+                  className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2] h-[20rem] w-[20rem] object-cover"
+                  src="https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
+                  alt="Image Description"
+                />
               </div>
             </div>
           )}
