@@ -132,7 +132,7 @@ const Modal = () => {
                     {/* Star */}
                     <svg
                       className="h-auto w-16 text-gray-800 dark:text-white"
-                      width={80}
+                      width={70}
                       height={27}
                       viewBox="0 0 80 27"
                       fill="none"
